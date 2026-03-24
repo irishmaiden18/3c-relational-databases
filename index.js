@@ -1,8 +1,8 @@
+// npm i
+
 /*
     0. Starter code - Modules
 */
-
-// npm i
 const express = require("express");
 const app = express();
 const logger = require("morgan");
@@ -26,6 +26,8 @@ app.use(logger("dev"));
 /*
     4. Import and use the album router
 */
+const albumsRouter = require("./routes/albums/albumsRouter")
+app.use("/api/v1/albums", albumsRouter)
 
 /*
     8. Import and use the user router
@@ -37,8 +39,10 @@ app.use(logger("dev"));
 /*
     0. Starter code - Server start
 */
+// set up the port
 const PORT = 3000;
 
+// start listening
 app.listen(PORT, () => {
   console.log(`server is on port ${PORT}...`);
 

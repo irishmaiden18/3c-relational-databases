@@ -22,9 +22,9 @@ const createAlbum = async (albumData) => {
     } catch (error) {
         
         // propogates the error to the router file
-        throw Error("Error creating new album")
+        throw error
     }
 }
 
 // 2c. Export controller functions
-
+module.exports = createAlbum
