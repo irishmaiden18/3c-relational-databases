@@ -32,9 +32,14 @@ app.use("/api/v1/albums", albumsRouter)
 /*
     8. Import and use the user router
 */
+const usersRouter = require("./routes/users/usersRouter")
+app.use("/api/v1/users", usersRouter)
+
 /*
     11. Context - Plug in the view router
 */
+const viewRouter = require("./routes/viewRoutes/viewRouter")
+app.use("/", viewRouter)
 
 /*
     0. Starter code - Server start
@@ -48,3 +53,4 @@ app.listen(PORT, () => {
 
   connectToMongoDB();
 });
+

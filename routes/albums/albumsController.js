@@ -3,6 +3,7 @@ const Album = require("./albumsModel")
 
 // Controller File -- separates the logic for interacting with the database into its own file
 // this makes it so the Router can handle routing and the Controller can handle logic
+// we are also able to reuse our controller functions as needed to help simplify other controller functions with logic we have already established
 
 // 2b. Write functionality to create an album
 
@@ -13,7 +14,7 @@ const createAlbum = async (albumData) => {
     // album data will be the request body
     try {
 
-        // creating the new album the same way we would do normall except inside our controller file
+        // creating the new album the same way we would do normally except inside our controller file
         const newAlbum = await Album.create(albumData)
 
         // return the new album
