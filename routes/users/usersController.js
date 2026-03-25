@@ -12,7 +12,7 @@ const createUser = async (userData) => {
 
     try {
 
-        // creating the new user the same way we woudl do normally except inside our controller file
+        // creating the new user the same way we would do normally except inside our controller file
         const newUser = await User.create(userData)
 
         //return the new user
